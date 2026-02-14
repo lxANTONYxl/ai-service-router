@@ -26,6 +26,9 @@ IAIService GetNextService()
     return service;
 }
 
+// Ruta de prueba para GET /
+app.MapGet("/", () => "AI Service Router is running!");
+
 app.MapPost("/chat", async (HttpContext context) =>
 {
     ChatRequest? requestBody;
