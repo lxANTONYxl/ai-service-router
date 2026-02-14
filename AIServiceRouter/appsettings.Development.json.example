@@ -1,0 +1,6 @@
+﻿{
+  "ApiKeys": {
+    "Groq": "your-groq-api-key-here",
+    "Cerebras": "your-cerebras-api-key-here"
+  }
+}
