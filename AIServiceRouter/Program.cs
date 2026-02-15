@@ -34,7 +34,11 @@ app.MapPost("/chat", async (HttpContext context) =>
     ChatRequest? requestBody;
     try
     {
-        requestBody = await JsonSerializer.DeserializeAsync<ChatRequest>(context.Request.Body);
+        var options = new JsonSerializerOptions 
+        { 
+            PropertyNameCaseInsensitive = true 
+        };
+        requestBody = await JsonSerializer.DeserializeAsync<ChatRequest>(context.Request.Body, options);
     }
     catch
     {
